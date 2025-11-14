@@ -29,7 +29,7 @@ public class Order {
             total = total + g.getPrice();
         }
 
-        for (Pizza p : pizza) {
+        for (Pizza p : pizzas) {
             total = total + p.getPrice();
         }
 
