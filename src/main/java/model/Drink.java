@@ -1,4 +1,4 @@
-package com.pluralsight;
+package model;
 
 public class Drink {
     private String size;

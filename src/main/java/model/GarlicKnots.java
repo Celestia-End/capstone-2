@@ -1,4 +1,4 @@
-package com.pluralsight;
+package model;
 
 public class GarlicKnots {
     private final double price = 1.50;

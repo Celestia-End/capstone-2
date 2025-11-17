@@ -1,4 +1,9 @@
-package com.pluralsight;
+package ui;
+
+import model.Order;
+import model.Drink;
+import model.GarlicKnots;
+import model.Pizza;
 
 import java.util.Scanner;
 
@@ -30,9 +35,9 @@ public class MainApp {
                 String crustType = input.nextLine();
 
                 System.out.println("Would you like stuffed crust?");
-                String stuffedCrust = input.nextLine();
+                boolean stuffedCrust = Boolean.parseBoolean(input.nextLine());
 
-                Pizza pizza = new Pizza(pizzaSize, crustType, boolean stuffedCrust);
+                Pizza pizza = new Pizza(pizzaSize, crustType, stuffedCrust);
 
                 boolean addingCheese = true;
 
