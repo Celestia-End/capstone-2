@@ -1,6 +1,6 @@
-# 🍕 Welcome to PIZZA-Licious!
+# 🍕 Welcome to The Dallas Dish!
 
-PIZZA-Licious is the pride and joy of italian food. We strive to be the best with every pizza slice!
+Dallas Dish is the pride and joy of bringing Italian food to the streets of Dallas. We strive to be the best with every pizza slice!
 
 ---
 

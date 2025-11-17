@@ -1,4 +1,4 @@
-package com.pluralsight.model;
+package com.pluralsight;
 
 import java.util.ArrayList;
 
@@ -8,9 +8,9 @@ public class Pizza {
     private boolean stuffedCrust;
     private ArrayList<String> cheese = new ArrayList<>();
     private ArrayList<String> toppings = new ArrayList<>();
-    private ArrayList<String> sauce = new ArrayList<>();
+    private ArrayList<String> sauces = new ArrayList<>();
 
-    public Pizza(String size, String crustType, boolean stuffedCrust, ArrayList<String> chees) {
+    public Pizza(String size, String crustType, boolean stuffedCrust) {
         this.size = size;
         this.crustType = crustType;
         this.stuffedCrust = stuffedCrust;
@@ -25,7 +25,7 @@ public class Pizza {
     }
 
     public void addSauce(String type) {
-        sauce.add(type);
+        sauces.add(type);
     }
 
     public String getSize() {
@@ -48,8 +48,8 @@ public class Pizza {
         return new ArrayList<>(toppings);
     }
 
-    public ArrayList<String> getSauce() {
-        return new ArrayList<>(sauce);
+    public ArrayList<String> getSauces() {
+        return new ArrayList<>(sauces);
     }
 
     public double getPrice() {

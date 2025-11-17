@@ -1,6 +1,5 @@
-package com.pluralsight.ui;
+package com.pluralsight;
 
-import com.pluralsight.model.*;
 import java.util.Scanner;
 
 public class MainApp {
@@ -14,7 +13,7 @@ public class MainApp {
             System.out.println();
             System.out.println("Welcome to PIZZA-Licious!");
             System.out.println();
-            System.out.println("Would you like to order a pizza today?");
+            System.out.println("Would you like to order a pizza today? (yes/no)");
             String answer = input.nextLine();
 
             if (answer.equalsIgnoreCase("yes")) {
@@ -24,36 +23,30 @@ public class MainApp {
                 System.out.println("3) Large");
                 String pizzaSize = input.nextLine();
 
-                System.out.println();
-
                 System.out.println("What crust would you like?");
                 System.out.println("1) Thin");
                 System.out.println("2) Hand-Tossed");
                 System.out.println("3) Deep Dish");
                 String crustType = input.nextLine();
 
-                System.out.println();
-
                 System.out.println("Would you like stuffed crust?");
-                boolean stuffedCrust = Boolean.parseBoolean(input.nextLine());
+                String stuffedCrust = input.nextLine();
 
-                System.out.println();
+                Pizza pizza = new Pizza(pizzaSize, crustType, boolean stuffedCrust);
 
-                System.out.println("Choose a meat");
-                System.out.println("1) Pepperoni");
-                System.out.println("2) Sausage");
-                System.out.println("3) Ham");
-                System.out.println("4) Bacon");
-                System.out.println("5) Chicken");
-                System.out.println("6) Meatballs");
-                System.out.println();
+                boolean addingCheese = true;
 
-                System.out.println("Would you like to add another meat?");
+                while (addingCheese) {
+                    System.out.println("What kind of cheese would you like?");
+                    System.out.println("1) Mozzarella");
+                    System.out.println("2) Parmesan");
+                    System.out.println("3) Ricotta");
+                    System.out.println("4) Goat Cheese");
+                    String cheeseType = input.nextLine();
 
+                    pizza.addCheese(cheeseType);
+                }
 
-                System.out.println("");
-
-                Pizza pizza = new Pizza(pizzaSize, crustType, stuffedCrust, meat, cheese);
                 order.addPizza(pizza);
             }
 
@@ -79,15 +72,6 @@ public class MainApp {
                 order.addGarlicKnots(garlicKnots);
                 System.out.println("Garlic Knots have been added to your order!");
             }
-
-
-            //Pizza
-            //if yes, ask for size, crust type, if they want stuffed crust (if yes add stuffed crust to order), meats, cheeses, toppings, sauces
-            //if no. I need it to go to drinks
-
-            //Garlic Knots
-            //if yes, add to order
-            //if no, go to checkout
         }
     }
 
